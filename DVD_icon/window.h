@@ -45,6 +45,7 @@ void Window::setup(const std::string &l_title, const sf::Vector2u &l_size)
     m_windowSize = l_size;
     m_isFullscreen = false;
     m_isDone = false;
+    //m_window.setFramerateLimit(60);
     Create();
 }
 
