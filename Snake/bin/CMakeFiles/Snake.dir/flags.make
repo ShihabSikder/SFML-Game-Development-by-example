@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/shihab/Desktop/SFML_Game_Development_by_example/Boilerplate/lib 
+CXX_INCLUDES = -I/home/shihab/Desktop/SFML_Game_Development_by_example/Snake/lib 
 

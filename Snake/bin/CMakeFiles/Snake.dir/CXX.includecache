@@ -6,7 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/shihab/Desktop/SFML_Game_Development_by_example/Boilerplate/src/main.cpp
+../lib/Snake.h
+SFML/Graphics.hpp
+-
+
+/home/shihab/Desktop/SFML_Game_Development_by_example/Snake/src/Snake.cpp
+Snake.h
+/home/shihab/Desktop/SFML_Game_Development_by_example/Snake/src/Snake.h
+
+/home/shihab/Desktop/SFML_Game_Development_by_example/Snake/src/main.cpp
 SFML/Graphics.hpp
 -
 bits/stdc++.h

@@ -19,6 +19,9 @@ include_directories(${HEADERS})
 # Define a list of our source files
 set(SOURCES
     "src/main.cpp"
+    "src/Snake.cpp"
+    "lib/Snake.h"
+   
 )
 
 # Set executable path to bin

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/shihab/Desktop/SFML_Game_Development_by_example/Boilerplate
+CMAKE_SOURCE_DIR = /home/shihab/Desktop/SFML_Game_Development_by_example/Snake
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/shihab/Desktop/SFML_Game_Development_by_example/Boilerplate/bin
+CMAKE_BINARY_DIR = /home/shihab/Desktop/SFML_Game_Development_by_example/Snake/bin
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Snake.dir/depend.make
@@ -59,32 +59,47 @@ include CMakeFiles/Snake.dir/flags.make
 
 CMakeFiles/Snake.dir/src/main.cpp.o: CMakeFiles/Snake.dir/flags.make
 CMakeFiles/Snake.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shihab/Desktop/SFML_Game_Development_by_example/Boilerplate/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Snake.dir/src/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Snake.dir/src/main.cpp.o -c /home/shihab/Desktop/SFML_Game_Development_by_example/Boilerplate/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shihab/Desktop/SFML_Game_Development_by_example/Snake/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Snake.dir/src/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Snake.dir/src/main.cpp.o -c /home/shihab/Desktop/SFML_Game_Development_by_example/Snake/src/main.cpp
 
 CMakeFiles/Snake.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Snake.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shihab/Desktop/SFML_Game_Development_by_example/Boilerplate/src/main.cpp > CMakeFiles/Snake.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shihab/Desktop/SFML_Game_Development_by_example/Snake/src/main.cpp > CMakeFiles/Snake.dir/src/main.cpp.i
 
 CMakeFiles/Snake.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Snake.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shihab/Desktop/SFML_Game_Development_by_example/Boilerplate/src/main.cpp -o CMakeFiles/Snake.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shihab/Desktop/SFML_Game_Development_by_example/Snake/src/main.cpp -o CMakeFiles/Snake.dir/src/main.cpp.s
+
+CMakeFiles/Snake.dir/src/Snake.cpp.o: CMakeFiles/Snake.dir/flags.make
+CMakeFiles/Snake.dir/src/Snake.cpp.o: ../src/Snake.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shihab/Desktop/SFML_Game_Development_by_example/Snake/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Snake.dir/src/Snake.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Snake.dir/src/Snake.cpp.o -c /home/shihab/Desktop/SFML_Game_Development_by_example/Snake/src/Snake.cpp
+
+CMakeFiles/Snake.dir/src/Snake.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Snake.dir/src/Snake.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shihab/Desktop/SFML_Game_Development_by_example/Snake/src/Snake.cpp > CMakeFiles/Snake.dir/src/Snake.cpp.i
+
+CMakeFiles/Snake.dir/src/Snake.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Snake.dir/src/Snake.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shihab/Desktop/SFML_Game_Development_by_example/Snake/src/Snake.cpp -o CMakeFiles/Snake.dir/src/Snake.cpp.s
 
 # Object files for target Snake
 Snake_OBJECTS = \
-"CMakeFiles/Snake.dir/src/main.cpp.o"
+"CMakeFiles/Snake.dir/src/main.cpp.o" \
+"CMakeFiles/Snake.dir/src/Snake.cpp.o"
 
 # External object files for target Snake
 Snake_EXTERNAL_OBJECTS =
 
 Snake: CMakeFiles/Snake.dir/src/main.cpp.o
+Snake: CMakeFiles/Snake.dir/src/Snake.cpp.o
 Snake: CMakeFiles/Snake.dir/build.make
 Snake: /usr/lib/x86_64-linux-gnu/libsfml-audio.so.2.5.1
 Snake: /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.5.1
 Snake: /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.5.1
 Snake: /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.5.1
 Snake: CMakeFiles/Snake.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/shihab/Desktop/SFML_Game_Development_by_example/Boilerplate/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Snake"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/shihab/Desktop/SFML_Game_Development_by_example/Snake/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Snake"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Snake.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -97,6 +112,6 @@ CMakeFiles/Snake.dir/clean:
 .PHONY : CMakeFiles/Snake.dir/clean
 
 CMakeFiles/Snake.dir/depend:
-	cd /home/shihab/Desktop/SFML_Game_Development_by_example/Boilerplate/bin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shihab/Desktop/SFML_Game_Development_by_example/Boilerplate /home/shihab/Desktop/SFML_Game_Development_by_example/Boilerplate /home/shihab/Desktop/SFML_Game_Development_by_example/Boilerplate/bin /home/shihab/Desktop/SFML_Game_Development_by_example/Boilerplate/bin /home/shihab/Desktop/SFML_Game_Development_by_example/Boilerplate/bin/CMakeFiles/Snake.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/shihab/Desktop/SFML_Game_Development_by_example/Snake/bin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shihab/Desktop/SFML_Game_Development_by_example/Snake /home/shihab/Desktop/SFML_Game_Development_by_example/Snake /home/shihab/Desktop/SFML_Game_Development_by_example/Snake/bin /home/shihab/Desktop/SFML_Game_Development_by_example/Snake/bin /home/shihab/Desktop/SFML_Game_Development_by_example/Snake/bin/CMakeFiles/Snake.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Snake.dir/depend
 

@@ -1,4 +1,4 @@
-# Install script for directory: /home/shihab/Desktop/SFML_Game_Development_by_example/Boilerplate
+# Install script for directory: /home/shihab/Desktop/SFML_Game_Development_by_example/Snake
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/shihab/Desktop/SFML_Game_Development_by_example/Boilerplate/bin/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/shihab/Desktop/SFML_Game_Development_by_example/Snake/bin/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

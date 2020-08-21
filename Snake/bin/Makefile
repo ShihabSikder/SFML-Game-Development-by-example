@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/shihab/Desktop/SFML_Game_Development_by_example/Boilerplate
+CMAKE_SOURCE_DIR = /home/shihab/Desktop/SFML_Game_Development_by_example/Snake
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/shihab/Desktop/SFML_Game_Development_by_example/Boilerplate/bin
+CMAKE_BINARY_DIR = /home/shihab/Desktop/SFML_Game_Development_by_example/Snake/bin
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shihab/Desktop/SFML_Game_Development_by_example/Boilerplate/bin/CMakeFiles /home/shihab/Desktop/SFML_Game_Development_by_example/Boilerplate/bin/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shihab/Desktop/SFML_Game_Development_by_example/Snake/bin/CMakeFiles /home/shihab/Desktop/SFML_Game_Development_by_example/Snake/bin/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shihab/Desktop/SFML_Game_Development_by_example/Boilerplate/bin/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shihab/Desktop/SFML_Game_Development_by_example/Snake/bin/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,6 +123,33 @@ Snake/fast:
 	$(MAKE) -f CMakeFiles/Snake.dir/build.make CMakeFiles/Snake.dir/build
 .PHONY : Snake/fast
 
+src/Snake.o: src/Snake.cpp.o
+
+.PHONY : src/Snake.o
+
+# target to build an object file
+src/Snake.cpp.o:
+	$(MAKE) -f CMakeFiles/Snake.dir/build.make CMakeFiles/Snake.dir/src/Snake.cpp.o
+.PHONY : src/Snake.cpp.o
+
+src/Snake.i: src/Snake.cpp.i
+
+.PHONY : src/Snake.i
+
+# target to preprocess a source file
+src/Snake.cpp.i:
+	$(MAKE) -f CMakeFiles/Snake.dir/build.make CMakeFiles/Snake.dir/src/Snake.cpp.i
+.PHONY : src/Snake.cpp.i
+
+src/Snake.s: src/Snake.cpp.s
+
+.PHONY : src/Snake.s
+
+# target to generate assembly for a file
+src/Snake.cpp.s:
+	$(MAKE) -f CMakeFiles/Snake.dir/build.make CMakeFiles/Snake.dir/src/Snake.cpp.s
+.PHONY : src/Snake.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -159,6 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Snake"
+	@echo "... src/Snake.o"
+	@echo "... src/Snake.i"
+	@echo "... src/Snake.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
