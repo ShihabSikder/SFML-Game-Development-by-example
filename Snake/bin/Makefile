@@ -123,6 +123,33 @@ Snake/fast:
 	$(MAKE) -f CMakeFiles/Snake.dir/build.make CMakeFiles/Snake.dir/build
 .PHONY : Snake/fast
 
+src/Game.o: src/Game.cpp.o
+
+.PHONY : src/Game.o
+
+# target to build an object file
+src/Game.cpp.o:
+	$(MAKE) -f CMakeFiles/Snake.dir/build.make CMakeFiles/Snake.dir/src/Game.cpp.o
+.PHONY : src/Game.cpp.o
+
+src/Game.i: src/Game.cpp.i
+
+.PHONY : src/Game.i
+
+# target to preprocess a source file
+src/Game.cpp.i:
+	$(MAKE) -f CMakeFiles/Snake.dir/build.make CMakeFiles/Snake.dir/src/Game.cpp.i
+.PHONY : src/Game.cpp.i
+
+src/Game.s: src/Game.cpp.s
+
+.PHONY : src/Game.s
+
+# target to generate assembly for a file
+src/Game.cpp.s:
+	$(MAKE) -f CMakeFiles/Snake.dir/build.make CMakeFiles/Snake.dir/src/Game.cpp.s
+.PHONY : src/Game.cpp.s
+
 src/Snake.o: src/Snake.cpp.o
 
 .PHONY : src/Snake.o
@@ -149,6 +176,60 @@ src/Snake.s: src/Snake.cpp.s
 src/Snake.cpp.s:
 	$(MAKE) -f CMakeFiles/Snake.dir/build.make CMakeFiles/Snake.dir/src/Snake.cpp.s
 .PHONY : src/Snake.cpp.s
+
+src/Window.o: src/Window.cpp.o
+
+.PHONY : src/Window.o
+
+# target to build an object file
+src/Window.cpp.o:
+	$(MAKE) -f CMakeFiles/Snake.dir/build.make CMakeFiles/Snake.dir/src/Window.cpp.o
+.PHONY : src/Window.cpp.o
+
+src/Window.i: src/Window.cpp.i
+
+.PHONY : src/Window.i
+
+# target to preprocess a source file
+src/Window.cpp.i:
+	$(MAKE) -f CMakeFiles/Snake.dir/build.make CMakeFiles/Snake.dir/src/Window.cpp.i
+.PHONY : src/Window.cpp.i
+
+src/Window.s: src/Window.cpp.s
+
+.PHONY : src/Window.s
+
+# target to generate assembly for a file
+src/Window.cpp.s:
+	$(MAKE) -f CMakeFiles/Snake.dir/build.make CMakeFiles/Snake.dir/src/Window.cpp.s
+.PHONY : src/Window.cpp.s
+
+src/World.o: src/World.cpp.o
+
+.PHONY : src/World.o
+
+# target to build an object file
+src/World.cpp.o:
+	$(MAKE) -f CMakeFiles/Snake.dir/build.make CMakeFiles/Snake.dir/src/World.cpp.o
+.PHONY : src/World.cpp.o
+
+src/World.i: src/World.cpp.i
+
+.PHONY : src/World.i
+
+# target to preprocess a source file
+src/World.cpp.i:
+	$(MAKE) -f CMakeFiles/Snake.dir/build.make CMakeFiles/Snake.dir/src/World.cpp.i
+.PHONY : src/World.cpp.i
+
+src/World.s: src/World.cpp.s
+
+.PHONY : src/World.s
+
+# target to generate assembly for a file
+src/World.cpp.s:
+	$(MAKE) -f CMakeFiles/Snake.dir/build.make CMakeFiles/Snake.dir/src/World.cpp.s
+.PHONY : src/World.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -186,9 +267,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Snake"
+	@echo "... src/Game.o"
+	@echo "... src/Game.i"
+	@echo "... src/Game.s"
 	@echo "... src/Snake.o"
 	@echo "... src/Snake.i"
 	@echo "... src/Snake.s"
+	@echo "... src/Window.o"
+	@echo "... src/Window.i"
+	@echo "... src/Window.s"
+	@echo "... src/World.o"
+	@echo "... src/World.i"
+	@echo "... src/World.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

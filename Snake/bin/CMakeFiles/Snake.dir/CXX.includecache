@@ -6,17 +6,45 @@
 
 #IncludeRegexTransform: 
 
+../lib/Game.h
+World.h
+-
+Window.h
+-
+
 ../lib/Snake.h
 SFML/Graphics.hpp
 -
 
-/home/shihab/Desktop/SFML_Game_Development_by_example/Snake/src/Snake.cpp
-Snake.h
-/home/shihab/Desktop/SFML_Game_Development_by_example/Snake/src/Snake.h
-
-/home/shihab/Desktop/SFML_Game_Development_by_example/Snake/src/main.cpp
+../lib/Window.h
 SFML/Graphics.hpp
 -
-bits/stdc++.h
+iostream
+-
+
+../lib/World.h
+SFML/Graphics.hpp
+-
+Snake.h
+-
+
+/home/shihab/Desktop/SFML_Game_Development_by_example/Snake/src/Game.cpp
+Game.h
+-
+
+/home/shihab/Desktop/SFML_Game_Development_by_example/Snake/src/Snake.cpp
+Snake.h
+-
+
+/home/shihab/Desktop/SFML_Game_Development_by_example/Snake/src/Window.cpp
+Window.h
+-
+
+/home/shihab/Desktop/SFML_Game_Development_by_example/Snake/src/World.cpp
+World.h
+-
+
+/home/shihab/Desktop/SFML_Game_Development_by_example/Snake/src/main.cpp
+Game.h
 -
 

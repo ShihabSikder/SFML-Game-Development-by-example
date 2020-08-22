@@ -1,4 +1,14 @@
-#include "Snake.h"
+#include<Snake.h>
+
+SnakeSegment::SnakeSegment(int x,int y):m_position(x,y){}
+
+sf::Vector2i SnakeSegment::getPosition(){
+    return m_position;
+}
+
+void SnakeSegment::setPosition(sf::Vector2i l_position){
+    m_position = l_position;
+}
 
 Snake::Snake(int l_bloackSize)
 {
@@ -42,7 +52,10 @@ int Snake::GetSpeed()
 
 sf::Vector2i Snake::GetPosition()
 {
-    return (!m_snakeBody.empty() ? m_snakeBody.front().position : sf::Vector2i(1, 1));
+    if(!m_snakeBody.empty())
+        return m_snakeBody.front().getPosition();
+    else
+        return sf::Vector2i(5,5);
 }
 
 int Snake::GetLives()
@@ -81,31 +94,31 @@ void Snake::Extend()
     if (m_snakeBody.size() > 1)
     {
         SnakeSegment &tail_bone = m_snakeBody[m_snakeBody.size() - 2];
-        if (tail_head.position.x == tail_bone.position.x)
+        if (tail_head.getPosition().x == tail_bone.getPosition().x)
         {
-            if (tail_head.position.y > tail_bone.position.y)
-                m_snakeBody.push_back(SnakeSegment(tail_head.position.x, tail_head.position.y + 1));
+            if (tail_head.getPosition().y > tail_bone.getPosition().y)
+                m_snakeBody.push_back(SnakeSegment(tail_head.getPosition().x, tail_head.getPosition().y + 1));
             else
-                m_snakeBody.push_back(SnakeSegment(tail_head.position.x, tail_head.position.y - 1));
+                m_snakeBody.push_back(SnakeSegment(tail_head.getPosition().x, tail_head.getPosition().y - 1));
         }
-        else if (tail_head.position.x > tail_bone.position.x)
+        else if (tail_head.getPosition().x > tail_bone.getPosition().x)
         {
-            if (tail_head.position.x > tail_bone.position.x)
-                m_snakeBody.push_back(SnakeSegment(tail_head.position.x + 1, tail_head.position.y));
+            if (tail_head.getPosition().x > tail_bone.getPosition().x)
+                m_snakeBody.push_back(SnakeSegment(tail_head.getPosition().x + 1, tail_head.getPosition().y));
             else
-                m_snakeBody.push_back(SnakeSegment(tail_head.position.x - 1, tail_head.position.y));
+                m_snakeBody.push_back(SnakeSegment(tail_head.getPosition().x - 1, tail_head.getPosition().y));
         }
     }
     else
     {
         if (m_dir == Direction::Up)
-            m_snakeBody.push_back(SnakeSegment(tail_head.position.x, tail_head.position.y + 1));
+            m_snakeBody.push_back(SnakeSegment(tail_head.getPosition().x, tail_head.getPosition().y + 1));
         else if (m_dir == Direction::Down)
-            m_snakeBody.push_back(SnakeSegment(tail_head.position.x, tail_head.position.y - 1));
+            m_snakeBody.push_back(SnakeSegment(tail_head.getPosition().x, tail_head.getPosition().y - 1));
         else if (m_dir == Direction::Left)
-            m_snakeBody.push_back(SnakeSegment(tail_head.position.x - 1, tail_head.position.y));
+            m_snakeBody.push_back(SnakeSegment(tail_head.getPosition().x - 1, tail_head.getPosition().y));
         else if (m_dir == Direction::Right)
-            m_snakeBody.push_back(SnakeSegment(tail_head.position.x + 1, tail_head.position.y));
+            m_snakeBody.push_back(SnakeSegment(tail_head.getPosition().x + 1, tail_head.getPosition().y));
     }
 }
 
@@ -125,17 +138,19 @@ void Snake::Tick()
 
 void Snake::Move()
 {
-    for (int i = m_snakeBody.size(); i > 0; --i)
-        m_snakeBody[i].position = m_snakeBody[i - 1].position;
+    for (int i = m_snakeBody.size() - 1; i > 0; i--)
+    {
+        m_snakeBody[i].setPosition(m_snakeBody[i - 1].getPosition());
+    }
 
+    if (m_dir == Direction::Left)
+        m_snakeBody[0].setPosition(sf::Vector2i(m_snakeBody[0].getPosition().x - 1, m_snakeBody[0].getPosition().y));
     if (m_dir == Direction::Right)
-        ++m_snakeBody[0].position.x;
-    else if (m_dir == Direction::Left)
-        --m_snakeBody[0].position.x;
-    else if (m_dir == Direction::Down)
-        ++m_snakeBody[0].position.y;
-    else if (m_dir == Direction::Up)
-        --m_snakeBody[0].position.y;
+        m_snakeBody[0].setPosition(sf::Vector2i(m_snakeBody[0].getPosition().x + 1, m_snakeBody[0].getPosition().y));
+    if (m_dir == Direction::Up)
+        m_snakeBody[0].setPosition(sf::Vector2i(m_snakeBody[0].getPosition().x, m_snakeBody[0].getPosition().y - 1));
+    if (m_dir == Direction::Down)
+        m_snakeBody[0].setPosition(sf::Vector2i(m_snakeBody[0].getPosition().x, m_snakeBody[0].getPosition().y + 1));
 }
 
 void Snake::CheckCollision()
@@ -147,7 +162,7 @@ void Snake::CheckCollision()
 
     for (auto itr = m_snakeBody.begin() + 1; itr != m_snakeBody.end(); itr++)
     {
-        if (itr->position == head.position)
+        if (itr->getPosition() == head.getPosition())
         {
             int segments = m_snakeBody.end() - itr;
             Cut(segments);
@@ -174,13 +189,13 @@ void Snake::Render(sf::RenderWindow &l_window)
         return;
     auto head = m_snakeBody.begin();
     m_bodyRect.setFillColor(sf::Color::Yellow);
-    m_bodyRect.setPosition(head->position.x * m_size, head->position.y * m_size);
+    m_bodyRect.setPosition(head->getPosition().x * m_size, head->getPosition().y * m_size);
 
     l_window.draw(m_bodyRect);
     m_bodyRect.setFillColor(sf::Color::Green);
     for (auto itr = m_snakeBody.begin() + 1; itr != m_snakeBody.end(); itr++)
     {
-        m_bodyRect.setPosition(itr->position.x * m_size, itr->position.y * m_size);
-    }
-    l_window.draw(m_bodyRect);
+        m_bodyRect.setPosition(itr->getPosition().x * m_size, itr->getPosition().y * m_size);
+        l_window.draw(m_bodyRect);
+    } 
 }

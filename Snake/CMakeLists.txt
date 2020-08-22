@@ -20,8 +20,13 @@ include_directories(${HEADERS})
 set(SOURCES
     "src/main.cpp"
     "src/Snake.cpp"
+    "src/World.cpp"
+    "src/Window.cpp"
+    "src/Game.cpp"
     "lib/Snake.h"
-   
+    "lib/Game.h"
+    "lib/Window.h"
+    "lib/World.h"
 )
 
 # Set executable path to bin

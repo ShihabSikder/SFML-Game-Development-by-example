@@ -1,8 +1,14 @@
 #include<SFML/Graphics.hpp>
 
-struct SnakeSegment
+class SnakeSegment
 {
-    SnakeSegment(int x, int y):position(x,y){} sf::Vector2i position;
+public:
+    SnakeSegment(int x, int y);
+    sf::Vector2i getPosition();
+    void setPosition(sf::Vector2i l_position);
+
+private:
+    sf::Vector2i m_position;
 };
 
 enum class Direction{None,Up,Down,Left,Right};

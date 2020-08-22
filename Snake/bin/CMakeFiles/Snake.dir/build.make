@@ -83,23 +83,68 @@ CMakeFiles/Snake.dir/src/Snake.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Snake.dir/src/Snake.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shihab/Desktop/SFML_Game_Development_by_example/Snake/src/Snake.cpp -o CMakeFiles/Snake.dir/src/Snake.cpp.s
 
+CMakeFiles/Snake.dir/src/World.cpp.o: CMakeFiles/Snake.dir/flags.make
+CMakeFiles/Snake.dir/src/World.cpp.o: ../src/World.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shihab/Desktop/SFML_Game_Development_by_example/Snake/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Snake.dir/src/World.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Snake.dir/src/World.cpp.o -c /home/shihab/Desktop/SFML_Game_Development_by_example/Snake/src/World.cpp
+
+CMakeFiles/Snake.dir/src/World.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Snake.dir/src/World.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shihab/Desktop/SFML_Game_Development_by_example/Snake/src/World.cpp > CMakeFiles/Snake.dir/src/World.cpp.i
+
+CMakeFiles/Snake.dir/src/World.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Snake.dir/src/World.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shihab/Desktop/SFML_Game_Development_by_example/Snake/src/World.cpp -o CMakeFiles/Snake.dir/src/World.cpp.s
+
+CMakeFiles/Snake.dir/src/Window.cpp.o: CMakeFiles/Snake.dir/flags.make
+CMakeFiles/Snake.dir/src/Window.cpp.o: ../src/Window.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shihab/Desktop/SFML_Game_Development_by_example/Snake/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Snake.dir/src/Window.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Snake.dir/src/Window.cpp.o -c /home/shihab/Desktop/SFML_Game_Development_by_example/Snake/src/Window.cpp
+
+CMakeFiles/Snake.dir/src/Window.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Snake.dir/src/Window.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shihab/Desktop/SFML_Game_Development_by_example/Snake/src/Window.cpp > CMakeFiles/Snake.dir/src/Window.cpp.i
+
+CMakeFiles/Snake.dir/src/Window.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Snake.dir/src/Window.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shihab/Desktop/SFML_Game_Development_by_example/Snake/src/Window.cpp -o CMakeFiles/Snake.dir/src/Window.cpp.s
+
+CMakeFiles/Snake.dir/src/Game.cpp.o: CMakeFiles/Snake.dir/flags.make
+CMakeFiles/Snake.dir/src/Game.cpp.o: ../src/Game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shihab/Desktop/SFML_Game_Development_by_example/Snake/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Snake.dir/src/Game.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Snake.dir/src/Game.cpp.o -c /home/shihab/Desktop/SFML_Game_Development_by_example/Snake/src/Game.cpp
+
+CMakeFiles/Snake.dir/src/Game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Snake.dir/src/Game.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shihab/Desktop/SFML_Game_Development_by_example/Snake/src/Game.cpp > CMakeFiles/Snake.dir/src/Game.cpp.i
+
+CMakeFiles/Snake.dir/src/Game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Snake.dir/src/Game.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shihab/Desktop/SFML_Game_Development_by_example/Snake/src/Game.cpp -o CMakeFiles/Snake.dir/src/Game.cpp.s
+
 # Object files for target Snake
 Snake_OBJECTS = \
 "CMakeFiles/Snake.dir/src/main.cpp.o" \
-"CMakeFiles/Snake.dir/src/Snake.cpp.o"
+"CMakeFiles/Snake.dir/src/Snake.cpp.o" \
+"CMakeFiles/Snake.dir/src/World.cpp.o" \
+"CMakeFiles/Snake.dir/src/Window.cpp.o" \
+"CMakeFiles/Snake.dir/src/Game.cpp.o"
 
 # External object files for target Snake
 Snake_EXTERNAL_OBJECTS =
 
 Snake: CMakeFiles/Snake.dir/src/main.cpp.o
 Snake: CMakeFiles/Snake.dir/src/Snake.cpp.o
+Snake: CMakeFiles/Snake.dir/src/World.cpp.o
+Snake: CMakeFiles/Snake.dir/src/Window.cpp.o
+Snake: CMakeFiles/Snake.dir/src/Game.cpp.o
 Snake: CMakeFiles/Snake.dir/build.make
 Snake: /usr/lib/x86_64-linux-gnu/libsfml-audio.so.2.5.1
 Snake: /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.5.1
 Snake: /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.5.1
 Snake: /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.5.1
 Snake: CMakeFiles/Snake.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/shihab/Desktop/SFML_Game_Development_by_example/Snake/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Snake"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/shihab/Desktop/SFML_Game_Development_by_example/Snake/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Snake"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Snake.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
