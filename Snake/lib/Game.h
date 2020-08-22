@@ -1,6 +1,6 @@
 #include<World.h>
 #include<Window.h>
-
+#include<Textbox.h>
 class Game{
     public:
         Game();
@@ -17,6 +17,6 @@ class Game{
         Window m_window;
         World m_world;
         Snake m_snake;
-
+        TextBox m_textbox;
         sf::Clock m_clock;
 };

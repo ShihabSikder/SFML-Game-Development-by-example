@@ -177,6 +177,33 @@ src/Snake.cpp.s:
 	$(MAKE) -f CMakeFiles/Snake.dir/build.make CMakeFiles/Snake.dir/src/Snake.cpp.s
 .PHONY : src/Snake.cpp.s
 
+src/Textbox.o: src/Textbox.cpp.o
+
+.PHONY : src/Textbox.o
+
+# target to build an object file
+src/Textbox.cpp.o:
+	$(MAKE) -f CMakeFiles/Snake.dir/build.make CMakeFiles/Snake.dir/src/Textbox.cpp.o
+.PHONY : src/Textbox.cpp.o
+
+src/Textbox.i: src/Textbox.cpp.i
+
+.PHONY : src/Textbox.i
+
+# target to preprocess a source file
+src/Textbox.cpp.i:
+	$(MAKE) -f CMakeFiles/Snake.dir/build.make CMakeFiles/Snake.dir/src/Textbox.cpp.i
+.PHONY : src/Textbox.cpp.i
+
+src/Textbox.s: src/Textbox.cpp.s
+
+.PHONY : src/Textbox.s
+
+# target to generate assembly for a file
+src/Textbox.cpp.s:
+	$(MAKE) -f CMakeFiles/Snake.dir/build.make CMakeFiles/Snake.dir/src/Textbox.cpp.s
+.PHONY : src/Textbox.cpp.s
+
 src/Window.o: src/Window.cpp.o
 
 .PHONY : src/Window.o
@@ -273,6 +300,9 @@ help:
 	@echo "... src/Snake.o"
 	@echo "... src/Snake.i"
 	@echo "... src/Snake.s"
+	@echo "... src/Textbox.o"
+	@echo "... src/Textbox.i"
+	@echo "... src/Textbox.s"
 	@echo "... src/Window.o"
 	@echo "... src/Window.i"
 	@echo "... src/Window.s"

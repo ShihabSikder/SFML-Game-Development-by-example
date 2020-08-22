@@ -23,6 +23,8 @@ set(SOURCES
     "src/World.cpp"
     "src/Window.cpp"
     "src/Game.cpp"
+    "src/Textbox.cpp"
+    "lib/Textbox.h"
     "lib/Snake.h"
     "lib/Game.h"
     "lib/Window.h"

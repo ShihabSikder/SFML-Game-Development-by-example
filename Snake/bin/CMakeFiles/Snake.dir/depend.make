@@ -3,12 +3,16 @@
 
 CMakeFiles/Snake.dir/src/Game.cpp.o: ../lib/Game.h
 CMakeFiles/Snake.dir/src/Game.cpp.o: ../lib/Snake.h
+CMakeFiles/Snake.dir/src/Game.cpp.o: ../lib/Textbox.h
 CMakeFiles/Snake.dir/src/Game.cpp.o: ../lib/Window.h
 CMakeFiles/Snake.dir/src/Game.cpp.o: ../lib/World.h
 CMakeFiles/Snake.dir/src/Game.cpp.o: ../src/Game.cpp
 
 CMakeFiles/Snake.dir/src/Snake.cpp.o: ../lib/Snake.h
 CMakeFiles/Snake.dir/src/Snake.cpp.o: ../src/Snake.cpp
+
+CMakeFiles/Snake.dir/src/Textbox.cpp.o: ../lib/Textbox.h
+CMakeFiles/Snake.dir/src/Textbox.cpp.o: ../src/Textbox.cpp
 
 CMakeFiles/Snake.dir/src/Window.cpp.o: ../lib/Window.h
 CMakeFiles/Snake.dir/src/Window.cpp.o: ../src/Window.cpp
@@ -19,6 +23,7 @@ CMakeFiles/Snake.dir/src/World.cpp.o: ../src/World.cpp
 
 CMakeFiles/Snake.dir/src/main.cpp.o: ../lib/Game.h
 CMakeFiles/Snake.dir/src/main.cpp.o: ../lib/Snake.h
+CMakeFiles/Snake.dir/src/main.cpp.o: ../lib/Textbox.h
 CMakeFiles/Snake.dir/src/main.cpp.o: ../lib/Window.h
 CMakeFiles/Snake.dir/src/main.cpp.o: ../lib/World.h
 CMakeFiles/Snake.dir/src/main.cpp.o: ../src/main.cpp
